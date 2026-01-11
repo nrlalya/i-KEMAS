@@ -1,0 +1,129 @@
+/* 
+    Document   : LupaKataLaluanAkaunIbuBapaAtauPenjaga.css
+*/
+
+/* ============================= */
+/* Custom theme                  */
+/* ============================= */
+
+:root {
+    --primary: #135bec;
+    --background-light: #f6f6f8;
+    --background-dark: #101622;
+    --text-dark: #0d121b;
+}
+
+/* ============================= */
+/* Fonts                         */
+/* ============================= */
+
+body {
+    font-family: 'Public Sans', 'Noto Sans', sans-serif;
+}
+
+/* ============================= */
+/* Background                    */
+/* ============================= */
+
+.bg-murid {
+    background-image: url("../image/MuridTabikaKemas.png");
+    background-size: cover;          /* isi penuh container */
+    background-position: center;     /* fokus tengah */
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.bg-murid::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0,0,0,0.5); /* hitam 50% transparent */
+    z-index: 1;
+}
+
+.text-overlay {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+/* ============================= */
+/* Form                          */
+/* ============================= */
+
+.form-input {
+    width: 100%;
+    height: 3rem;
+    padding: 0 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    color: var(--text-dark);
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 0 1px var(--primary);
+}
+
+/* ============================= */
+/* Button                        */
+/* ============================= */
+
+.btn-primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    height: 3rem;
+    background-color: var(--primary);
+    color: #fff;
+    font-weight: bold;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+    box-shadow: 0 4px 10px rgba(19, 91, 236, 0.3);
+}
+
+
+/* ============================= */
+/* Notification Bar Overlay      */
+/* ============================= */
+
+#overlayAlert {
+    position: fixed;
+    top: -100px;            
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    text-align: center;
+    font-weight: bold;
+    padding: 1rem;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: all 0.5s ease;
+}
+
+#overlayAlert.show {
+    top: 0;                 
+}
+
+/* success */
+.bg-green-500 {
+    background-color: #22c55e;
+}   
+
+ /* error */
+.bg-red-500   {
+    background-color: #ef4444;
+}  
+
+ /* warning */
+.bg-yellow-500{
+    background-color: #ffcc00;
+}
